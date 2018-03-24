@@ -19,12 +19,17 @@ Route::get('/dashboard', function () {
     return view('dashboard.index');
 });
 
-Route::get('/room', function () {
-    return view('room.index');
-});
 
 Route::get('/booking', function () {
     return view('booking.index');
+});
+
+Route::resource('level','LevelController');
+Route::resource('location','LocationController');
+Route::resource('roomtype','RoomTypeController');
+Route::resource('room','RoomController');
+Route::get('/roomcontrol', function () {
+    return view('room.roomcontrol');
 });
 
 Auth::routes();

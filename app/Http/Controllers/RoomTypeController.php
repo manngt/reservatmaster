@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Level;
-use Illuminate\Database\QueryException;
+use App\RoomType;
 use Illuminate\Http\Request;
 
-class LevelController extends Controller
+class RoomTypeController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -16,9 +16,9 @@ class LevelController extends Controller
     public function index()
     {
 
-        $levels = Level::all();
+        $room_types = RoomType::all();
 
-        return view('level.index',compact('levels'));
+        return view('roomtype.index',compact('room_types'));
 
     }
 
@@ -30,7 +30,7 @@ class LevelController extends Controller
     public function create()
     {
 
-        return view('level.create',[
+        return view('roomtype.create',[
             'edit' => false
         ]);
 
@@ -45,15 +45,18 @@ class LevelController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'id' => 'required|unique:levels|numeric',
+
             'name' => 'required',
+
         ]);
 
-        Level::create($request->all());
+        $request['id'] = time();
 
-        return redirect()->route('level.index')
+        RoomType::create($request->all());
 
-            ->with('Correcto','Nivel creado');
+        return redirect()->route('roomtype.index')
+
+            ->with('Correcto','Tipo de habitación creado');
     }
 
     /**
@@ -75,10 +78,10 @@ class LevelController extends Controller
      */
     public function edit($id)
     {
-        $level = Level::find($id);
+        $room_type = RoomType::find($id);
 
-        return view('level.edit',[
-            'level' => $level,
+        return view('roomtype.edit',[
+            'room_type' => $room_type,
             'edit' => true
         ]);
     }
@@ -94,15 +97,17 @@ class LevelController extends Controller
     {
 
         $request->validate([
+
             'name' => 'required',
+
         ]);
 
-        Level::find($id)->update($request->except('id'));
+        RoomType::find($id)->update($request->except('id'));
 
 
-        return redirect()->route('level.index')
+        return redirect()->route('roomtype.index')
 
-            ->with('Correcto','Nivel actualizado');
+            ->with('Correcto','Tipo de habitación actualizado');
 
     }
 
@@ -117,16 +122,16 @@ class LevelController extends Controller
 
         try
         {
-            Level::find($id)->delete();
+            RoomType::find($id)->delete();
         }
         catch (QueryException $qe)
         {
-            return redirect()->route('level.index')
+            return redirect()->route('roomtype.index')
                 ->with('Incorrecto',$qe->getMessage());
         }
 
-        return redirect()->route('level.index')
+        return redirect()->route('roomtype.index')
 
-            ->with('Correcto','Nivel eliminado');
+            ->with('Correcto','Tipo de habitación eliminado');
     }
 }

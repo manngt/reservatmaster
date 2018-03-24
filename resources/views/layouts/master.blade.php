@@ -74,6 +74,7 @@
             <!--breadcrumbs end-->
             <!--start container-->
             <div class="container">
+                @include('layouts.postmessages')
                 @yield('content')
             </div>
             <!--end container-->

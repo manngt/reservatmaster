@@ -32,7 +32,7 @@
     <li class="no-padding">
         <ul class="collapsible" data-collapsible="accordion">
             <li class="bold">
-                <a class="collapsible-header waves-effect waves-cyan active">
+                <a class="collapsible-header waves-effect waves-cyan">
                     <i class="material-icons">dashboard</i>
                     <span class="nav-text">Dashboard</span>
                 </a>
@@ -49,10 +49,55 @@
             </li>
 
             <li class="bold">
-                <a href="/room" class="waves-effect waves-cyan">
+                <a class="collapsible-header waves-effect waves-cyan">
+                    <i class="material-icons">menu</i>
+                    <span class="nav-text">Catalogos</span>
+                </a>
+                <div class="collapsible-body">
+                    <ul>
+                        <li>
+                            <a href="{{route('location.index')}}">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                                <span>Ubicaciones</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{route('level.index')}}">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                                <span>Niveles</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{route('roomtype.index')}}">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                                <span>Tipos</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="bold">
+                <a class="collapsible-header waves-effect waves-cyan">
                     <i class="material-icons">hotel</i>
                     <span class="nav-text">Habitaciones</span>
                 </a>
+                <div class="collapsible-body">
+                    <ul>
+                        <li>
+                            <a href="{{'roomcontrol'}}">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                                <span>Control</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{route('room.index')}}">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                                <span>Listado</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </li>
             <li class="bold">
                 <a href="/booking" class="waves-effect waves-cyan">

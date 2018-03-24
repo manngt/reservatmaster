@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Level;
-use Illuminate\Database\QueryException;
+use App\Location;
 use Illuminate\Http\Request;
 
-class LevelController extends Controller
+class LocationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +15,9 @@ class LevelController extends Controller
     public function index()
     {
 
-        $levels = Level::all();
+        $locations = Location::all();
 
-        return view('level.index',compact('levels'));
+        return view('location.index',compact('locations'));
 
     }
 
@@ -30,7 +29,7 @@ class LevelController extends Controller
     public function create()
     {
 
-        return view('level.create',[
+        return view('location.create',[
             'edit' => false
         ]);
 
@@ -45,15 +44,18 @@ class LevelController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'id' => 'required|unique:levels|numeric',
+
             'name' => 'required',
+
         ]);
 
-        Level::create($request->all());
+        $request['id'] = time();
 
-        return redirect()->route('level.index')
+        Location::create($request->all());
 
-            ->with('Correcto','Nivel creado');
+        return redirect()->route('location.index')
+
+            ->with('Correcto','Ubicación creada');
     }
 
     /**
@@ -75,10 +77,10 @@ class LevelController extends Controller
      */
     public function edit($id)
     {
-        $level = Level::find($id);
+        $location = Location::find($id);
 
-        return view('level.edit',[
-            'level' => $level,
+        return view('location.edit',[
+            'location' => $location,
             'edit' => true
         ]);
     }
@@ -97,12 +99,12 @@ class LevelController extends Controller
             'name' => 'required',
         ]);
 
-        Level::find($id)->update($request->except('id'));
+        Location::find($id)->update($request->except('id'));
 
 
-        return redirect()->route('level.index')
+        return redirect()->route('location.index')
 
-            ->with('Correcto','Nivel actualizado');
+            ->with('Correcto','Ubicación actualizado');
 
     }
 
@@ -117,16 +119,16 @@ class LevelController extends Controller
 
         try
         {
-            Level::find($id)->delete();
+            Location::find($id)->delete();
         }
         catch (QueryException $qe)
         {
-            return redirect()->route('level.index')
+            return redirect()->route('location.index')
                 ->with('Incorrecto',$qe->getMessage());
         }
 
-        return redirect()->route('level.index')
+        return redirect()->route('location.index')
 
-            ->with('Correcto','Nivel eliminado');
+            ->with('Correcto','Ubicación eliminada');
     }
 }
