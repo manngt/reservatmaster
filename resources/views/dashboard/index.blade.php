@@ -26,13 +26,13 @@
                         <h4 class="header m-0">Ganancias
                             <i class="material-icons right grey-text lighten-3">more_vert</i>
                         </h4>
-                        <p class="no-margin grey-text lighten-3 medium-small">Lunes 15 - Doming 21</p>
+                        <p class="no-margin grey-text lighten-3 medium-small">Lunes 15 - Domingo 21</p>
                         <h3 class="header">Q. 899.39
                             <i class="material-icons deep-orange-text text-accent-2">arrow_upward</i>
                         </h3>
                         <canvas id="monthlyEarning" class="" height="150"></canvas>
                         <div class="center-align">
-                            <p class="lighten-3">Total de ganancias semanal</p>
+                            <p class="lighten-3">Total de ganancias semanales</p>
                             <a class="waves-effect waves-light btn gradient-45deg-purple-deep-orange gradient-shadow">Ver Completo</a>
                         </div>
                     </div>
