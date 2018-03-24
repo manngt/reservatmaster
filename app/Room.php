@@ -19,6 +19,8 @@ class Room extends Model
 
         'room_type_id',
 
+        'room_status_id',
+
         'cost',
 
         'price',
@@ -48,6 +50,12 @@ class Room extends Model
 
         return $this->belongsTo(RoomType::class, 'room_type_id', 'id');
 
+    }
+
+    public function room_status()
+    {
+
+        return $this->belongsTo(RoomStatus::class,'room_status_id','id');
     }
 
 }

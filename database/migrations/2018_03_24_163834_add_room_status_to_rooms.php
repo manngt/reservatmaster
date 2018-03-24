@@ -42,7 +42,7 @@ class AddRoomStatusToRooms extends Migration
         Schema::table('rooms', function (Blueprint $table) {
 
             $table->dropColumn('room_status_id');
-            
+
         });
 
     }

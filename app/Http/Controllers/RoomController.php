@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Level;
 use App\Location;
 use App\Room;
+use App\RoomStatus;
 use App\RoomType;
 use Illuminate\Http\Request;
 
@@ -39,6 +40,8 @@ class RoomController extends Controller
 
         $levels = Level::select('id','name')->get();
 
+        $roomstatuses = RoomStatus::select('id','name')->get();
+
         return view('room.create',[
             'edit' => false,
 
@@ -46,7 +49,9 @@ class RoomController extends Controller
 
             'room_types' => $room_types,
 
-            'levels' => $levels
+            'levels' => $levels,
+
+            'roomstatuses' => $roomstatuses
 
         ]);
 
@@ -118,16 +123,30 @@ class RoomController extends Controller
     public function edit($id)
     {
         $room = Room::find($id);
+
         $room_types = RoomType::select('name','id')->get();
+
         $locations = Location::select('name','id')->get();
+
         $levels = Level::select('name','id')->get();
 
+        $roomstatuses = Room::select('id','name')->get();
+
+
         return view('room.edit',[
+
             'room' => $room,
+
             'room_types' => $room_types,
+
             'locations' => $locations,
+
             'levels' => $levels,
+
+            'rommstatuses' => $roomstatuses,
+
             'edit' => true
+
         ]);
     }
 

@@ -58,6 +58,22 @@
 
 <div class="row">
     <div class="input-field col s12">
+        <select name="room_status_id">
+            <option value="" name="room_status_id" disabled selected>Estado</option>
+            @foreach($roomstatuses as $roomstatus)
+                <option value="{{$roomstatus->id}}"
+                        @if(isset($roomstatus->level_id))
+                        @if($roomstatus->id == $room->room_status_id)
+                        selected="selected"
+                        @endif
+                        @endif>{{$roomstatus->name}}</option>
+            @endforeach
+        </select>
+    </div>
+</div>
+
+<div class="row">
+    <div class="input-field col s12">
         <i class="material-icons prefix">attach_money</i>
         <input id="name" name="cost" value="{{ old('name',isset($room->cost) ? $room->cost : null) }}" type="number" step="any" >
         <label for="id">Costo</label>

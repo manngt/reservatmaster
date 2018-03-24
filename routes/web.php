@@ -28,6 +28,7 @@ Route::resource('level','LevelController');
 Route::resource('location','LocationController');
 Route::resource('roomtype','RoomTypeController');
 Route::resource('room','RoomController');
+Route::resource('roomstatus','RoomStatusController');
 Route::get('/roomcontrol', function () {
     return view('room.roomcontrol');
 });
