@@ -73,6 +73,12 @@
                                 <span>Tipos</span>
                             </a>
                         </li>
+                        <li>
+                            <a href="{{route('roomstatus.index')}}">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                                <span>Estados de habitación</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </li>
