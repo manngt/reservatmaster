@@ -75,6 +75,8 @@ class RoomController extends Controller
 
             'room_type_id' => 'required|numeric',
 
+            'room_status_id' => 'required|numeric',
+
             'cost' => 'required',
 
             'price' => 'required'
