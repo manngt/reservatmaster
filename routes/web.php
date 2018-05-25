@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontpage.index');
 });
 
 Route::get('/dashboard', function () {
@@ -29,6 +29,7 @@ Route::resource('location','LocationController');
 Route::resource('roomtype','RoomTypeController');
 Route::resource('room','RoomController');
 Route::resource('roomstatus','RoomStatusController');
+Route::resource('frontpageadm','FrontPageAdmController');
 Route::get('/roomcontrol', function () {
     return view('room.roomcontrol');
 });
