@@ -1,12 +1,20 @@
 @extends('layouts.mastersite')
 @section('content')
 
-    <div class="row">
-        <div class="carousel carousel-slider" data-indicators="true">
+
+    <div class="slider">
+        <ul class="slides">
+
             @foreach($banner_images as $banner_image)
-            <a class="carousel-item"><img src="{{asset('images/banners/'.$banner_image->image)}}"></a>
+            <li>
+                <img src="{{asset('images/banners/'.$banner_image->image)}}"> <!-- random image -->
+                <div class="caption center-align">
+                    <h3>Paisajes asombrosos!</h3>
+                    <h5 class="light grey-text text-lighten-3">Para que relajes</h5>
+                </div>
+            </li>
             @endforeach
-        </div>
+        </ul>
     </div>
 
     <div class="row responsive">
@@ -24,6 +32,10 @@
 @endsection
 @section('scripts')
 <script>
-    $('.carousel.carousel-slider').carousel({fullWidth: true});
+
+    $(document).ready(function(){
+        $('.slider').slider();
+        $('.carousel.carousel-slider').carousel({fullWidth: true});
+    });
 </script>
 @endsection
