@@ -174,7 +174,7 @@
             </li>
             <li class="bold">
                 <a class="collapsible-header waves-effect waves-cyan">
-                    <i class="material-icons">home</i>
+                    <i class="material-icons">payment</i>
                     <span class="nav-text">Cuentas</span>
                 </a>
                 <div class="collapsible-body">
