@@ -156,23 +156,23 @@ class ReservationController extends Controller
 
         ]);
 
-        $reservation_status = ReservationStatus::where('name','Checkout')->get();
-        $room_busy = RoomStatus::where('name','Ocupada')->get();
-        $room_status = RoomStatus::where('name','Disponible')->get();
+        $reservation_status = ReservationStatus::where('name','Checkout')->first();
+        $room_busy = RoomStatus::where('name','Ocupada')->first();
+        $room_status = RoomStatus::where('name','Disponible')->first();
 
         if($request['reservation_status_id']==$reservation_status->id)
         {
             Room::find($request['room_id'])->update(['room_status_id'=>$room_status->id]);
         }
 
-        $reservation_cancel =ReservationStatus::where('name','Cancelada')->get();
+        $reservation_cancel =ReservationStatus::where('name','Cancelada')->first();
 
         if($request['reservation_status_id']==$reservation_cancel->id)
         {
             Room::find($request['room_id'])->update(['room_status_id'=>$room_status->id]);
         }
 
-        $reservation_in =ReservationStatus::where('name','Checkin')->get();
+        $reservation_in =ReservationStatus::where('name','Checkin')->first();
 
         if($request['reservation_status_id']==$reservation_in->id)
         {

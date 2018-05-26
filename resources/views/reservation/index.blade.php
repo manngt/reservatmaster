@@ -43,7 +43,7 @@
                     @foreach($reservations as $reservation)
                         <tr>
                             <td>{{$reservation->id}}</td>
-                            <td>{{$reservation->User->name.' '.$reservation->User->lastname}}</td>
+                            <td>{{$reservation->User->name.' '.$reservation->User->lastName}}</td>
                             <td>{{$reservation->Room->number}}</td>
                             <td>{{$reservation->Client->first_name.' '.$reservation->Client->last_name}}</td>
                             <td>{{$reservation->ReservationStatus->name}}</td>
