@@ -182,7 +182,7 @@
                         <li>
                             <a href="{{route('check.index')}}">
                                 <i class="material-icons">keyboard_arrow_right</i>
-                                <span>Nueva</span>
+                                <span>Cuentas</span>
                             </a>
                         </li>
                         <li>

@@ -72,7 +72,9 @@ class CheckController extends Controller
      */
     public function show($id)
     {
-        //
+        $check = Check::find($id);
+
+        return view('check.show',compact('check'));
     }
 
     /**

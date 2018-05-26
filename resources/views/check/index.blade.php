@@ -34,6 +34,9 @@
                                 <form action="{{route('check.destroy',$check->id)}}" method="POST" style="display: inline">
                                     {{method_field('DELETE')}}
                                     @csrf
+                                    <a class="btn-flat" href="{{ route('check.show',$check->id) }}">
+                                        <i class="material-icons indigo-text">info_outline</i>
+                                    </a>
                                     <a class="btn-flat" href="{{ route('check.edit',$check->id) }}">
                                         <i class="material-icons green-text">mode_edit</i>
                                     </a>
