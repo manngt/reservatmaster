@@ -6,26 +6,14 @@
             </div>
             <div class="col col s8 m8 l8">
                 <ul id="profile-dropdown-nav" class="dropdown-content">
-                    <li>
-                        <a href="#" class="grey-text text-darken-1">
-                            <i class="material-icons">face</i> Perfil</a>
-                    </li>
-                    <li>
-                        <a href="#" class="grey-text text-darken-1">
-                            <i class="material-icons">settings</i> Ajustes</a>
-                    </li>
-                    <li>
-                        <a href="#" class="grey-text text-darken-1">
-                            <i class="material-icons">live_help</i> Ayuda</a>
-                    </li>
 
                     <li>
-                        <a href="#" class="grey-text text-darken-1">
+                        <a href="{{route('logout')}}" class="grey-text text-darken-1">
                             <i class="material-icons">keyboard_tab</i> Salir</a>
                     </li>
                 </ul>
-                <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown-nav">Pedro Hernandez<i class="mdi-navigation-arrow-drop-down right"></i></a>
-                <p class="user-roal">Administrador</p>
+                <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown-nav">{{Auth::User()->name.' '.Auth::User()->lastName}}<i class="mdi-navigation-arrow-drop-down right"></i></a>
+                <p class="user-roal">{{Auth::User()->position}}</p>
             </div>
         </div>
     </li>
@@ -50,8 +38,8 @@
 
             <li class="bold">
                 <a class="collapsible-header waves-effect waves-cyan">
-                    <i class="material-icons">menu</i>
-                    <span class="nav-text">Catalogos</span>
+                    <i class="material-icons">hotel</i>
+                    <span class="nav-text">Habitaciones</span>
                 </a>
                 <div class="collapsible-body">
                     <ul>
@@ -79,37 +67,98 @@
                                 <span>Estados de habitación</span>
                             </a>
                         </li>
+                        <li>
+                            <a href="{{route('room.index')}}">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                                <span>Habitaciones</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </li>
-
             <li class="bold">
                 <a class="collapsible-header waves-effect waves-cyan">
-                    <i class="material-icons">hotel</i>
-                    <span class="nav-text">Habitaciones</span>
+                    <i class="material-icons">face</i>
+                    <span class="nav-text">Huespedes</span>
                 </a>
                 <div class="collapsible-body">
                     <ul>
                         <li>
-                            <a href="{{'roomcontrol'}}">
+                            <a href="{{route('documenttype.index')}}">
                                 <i class="material-icons">keyboard_arrow_right</i>
-                                <span>Control</span>
+                                <span>Tipos de documento</span>
                             </a>
                         </li>
                         <li>
-                            <a href="{{route('room.index')}}">
+                            <a href="{{route('country.index')}}">
                                 <i class="material-icons">keyboard_arrow_right</i>
-                                <span>Listado</span>
+                                <span>Nacionalidad</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{route('client.index')}}">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                                <span>Huespedes</span>
                             </a>
                         </li>
                     </ul>
                 </div>
             </li>
             <li class="bold">
-                <a href="/booking" class="waves-effect waves-cyan">
-                    <i class="material-icons">date_range</i>
+                <a class="collapsible-header waves-effect waves-cyan">
+                    <i class="material-icons">book</i>
                     <span class="nav-text">Reservaciones</span>
                 </a>
+                <div class="collapsible-body">
+                    <ul>
+                        <li>
+                            <a href="{{route('reservationtime.index')}}">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                                <span>Vigencias</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{route('reservationstatus.index')}}">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                                <span>Estados</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{route('reservationsource.index')}}">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                                <span>Origenes</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{route('reservation.index')}}">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                                <span>Reservaciones</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="bold">
+                <a class="collapsible-header waves-effect waves-cyan">
+                    <i class="material-icons">home</i>
+                    <span class="nav-text">Portada</span>
+                </a>
+                <div class="collapsible-body">
+                    <ul>
+                        <li>
+                            <a href="{{route('frontpageadm.index')}}">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                                <span>Articulos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{route('bannerimage.index')}}">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                                <span>Banners</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </li>
         </ul>
     </li>

@@ -20,9 +20,7 @@ Route::get('/dashboard', function () {
 });
 
 
-Route::get('/booking', function () {
-    return view('booking.index');
-});
+
 
 Route::resource('level','LevelController');
 Route::resource('location','LocationController');
@@ -38,12 +36,7 @@ Route::resource('reservationtime','ReservationTimeController');
 Route::resource('reservationsource','ReservationSourceController');
 Route::resource('reservationstatus','ReservationStatusController');
 Route::resource('reservation','ReservationController');
-Route::get('/roomcontrol', function () {
-    return view('room.roomcontrol');
-});
-
 Auth::routes();
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
-
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'FrontPageController@index')->name('inicio');
