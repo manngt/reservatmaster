@@ -30,7 +30,7 @@
                         <tr>
                             <td>{{$room_picture->id}}</td>
                             <td>{{$room_picture->Room->number}}</td>
-                            <td><img src="{{'images/rooms'.$room_picture->picture}}"></td>
+                            <td><img src="{{'images/rooms/'.$room_picture->picture}}" width="300" height="200"></td>
                             <td>
                                 <div class="form-group col s12">
 
