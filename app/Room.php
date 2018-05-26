@@ -58,4 +58,9 @@ class Room extends Model
         return $this->belongsTo(RoomStatus::class,'room_status_id','id');
     }
 
+    public function RoomPictures()
+    {
+        return $this->hasMany(RoomPicture::class,'room_id','id');
+    }
+
 }

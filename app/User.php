@@ -40,7 +40,7 @@ class User extends Authenticatable
 
         'password',
 
-
+        'password_confirmation'
 
     ];
 
@@ -56,4 +56,6 @@ class User extends Authenticatable
         'remember_token',
 
     ];
+
+
 }

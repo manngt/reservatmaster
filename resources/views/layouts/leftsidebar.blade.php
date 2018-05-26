@@ -17,6 +17,7 @@
             </div>
         </div>
     </li>
+
     <li class="no-padding">
         <ul class="collapsible" data-collapsible="accordion">
             <li class="bold">
@@ -35,7 +36,12 @@
                     </ul>
                 </div>
             </li>
-
+            <li class="bold">
+                <a href="{{route('user.index')}}" class="waves-effect waves-cyan">
+                    <i class="material-icons">account_circle</i>
+                    <span class="nav-text">Usuarios</span>
+                </a>
+            </li>
             <li class="bold">
                 <a class="collapsible-header waves-effect waves-cyan">
                     <i class="material-icons">hotel</i>
@@ -71,6 +77,12 @@
                             <a href="{{route('room.index')}}">
                                 <i class="material-icons">keyboard_arrow_right</i>
                                 <span>Habitaciones</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{route('roompicture.index')}}">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                                <span>Imagenes</span>
                             </a>
                         </li>
                     </ul>
@@ -155,6 +167,28 @@
                             <a href="{{route('bannerimage.index')}}">
                                 <i class="material-icons">keyboard_arrow_right</i>
                                 <span>Banners</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="bold">
+                <a class="collapsible-header waves-effect waves-cyan">
+                    <i class="material-icons">home</i>
+                    <span class="nav-text">Cuentas</span>
+                </a>
+                <div class="collapsible-body">
+                    <ul>
+                        <li>
+                            <a href="{{route('check.index')}}">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                                <span>Nueva</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{route('checkdetail.index')}}">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                                <span>Detalle</span>
                             </a>
                         </li>
                     </ul>

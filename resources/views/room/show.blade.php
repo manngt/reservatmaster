@@ -4,11 +4,13 @@
 
 <div class="col s12 m6 l6">
     <div class="card">
-        <div class="card-image">
-            <img src="{{ asset($room->picture_path.'/'.$room->picture) }}" alt="sample">
-            <span class="card-title">{{'Habitación: '.$room->number}}</span>
-        </div>
         <div class="card-content">
+
+            <div class="carousel">
+                @foreach($room->RoomPictures as $picture)
+                <a class="carousel-item"><img src="{{asset('images/rooms/'.$picture->picture)}}"></a>
+                @endforeach
+            </div>
 
             <ul>
                 <li>
@@ -43,4 +45,13 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('scripts')
+    <script>
+        $(document).ready(function(){
+            $('.carousel').carousel();
+        });
+    </script>
+
 @endsection

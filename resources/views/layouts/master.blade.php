@@ -127,6 +127,7 @@
 <script type="text/javascript" src="{{asset('materialize/js/custom-script.js')}}"></script>
 
 <script type="text/javascript" src="{{asset('materialize/js/scripts/dashboard-ecommerce.js')}}"></script>
+@yield('scripts')
 </body>
 
 </html>

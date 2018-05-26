@@ -1,0 +1,23 @@
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Check extends Model
+{
+    protected  $fillable = [
+        'id',
+        'client_id'
+    ];
+
+    public function Client()
+    {
+        return $this->belongsTo(Client::class,'client_id','id');
+    }
+
+    public function CheckDetails()
+    {
+        return $this->hasMany(CheckDetail::class,'check_id','id');
+    }
+}
