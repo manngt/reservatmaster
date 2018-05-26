@@ -2,10 +2,10 @@
 @section('content')
 
     <div id="table-datatables">
-        <h4 class="header">Paises</h4>
+        <h4 class="header">Usuario</h4>
         <div class="row">
             <div class="col s12">
-                <p>Listado de paises</p>
+                <p>Listado de usuarios</p>
             </div>
             <div class="col s12">
                 <table id="data-table-simple" class="responsive-table display" cellspacing="0">
