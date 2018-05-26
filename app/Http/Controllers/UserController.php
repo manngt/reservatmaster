@@ -115,6 +115,8 @@ class UserController extends Controller
             'password_confirmation' => ''
         ]);
 
+        $request['password'] = bcrypt($request['password']);
+
         $user = $request->except('password_confirmation');
 
         User::find($id)->update($user);
