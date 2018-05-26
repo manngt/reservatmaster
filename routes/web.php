@@ -37,6 +37,7 @@ Route::resource('client','ClientController');
 Route::resource('reservationtime','ReservationTimeController');
 Route::resource('reservationsource','ReservationSourceController');
 Route::resource('reservationstatus','ReservationStatusController');
+Route::resource('reservation','ReservationController');
 Route::get('/roomcontrol', function () {
     return view('room.roomcontrol');
 });

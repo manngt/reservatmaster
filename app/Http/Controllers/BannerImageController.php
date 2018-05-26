@@ -84,7 +84,7 @@ class BannerImageController extends Controller
             ->with('Correcto','Imagen actualizada');
 
     }
-    public function destroy()
+    public function destroy($id)
     {
 
         BannerImage::find($id)->delete();

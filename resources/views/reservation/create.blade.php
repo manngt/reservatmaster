@@ -2,11 +2,11 @@
 @section('content')
     <div class="col s12 m12 l6">
         <div class="card-panel">
-            <h4 class="header2">Crear País</h4>
+            <h4 class="header2">Crear Reservación</h4>
             <div class="row">
-                <form class="col s12" action="{{route('country.store')}}" method="POST">
+                <form class="col s12" action="{{route('reservation.store')}}" method="POST">
                     @csrf
-                    @include('country.form')
+                    @include('reservation.form')
                 </form>
             </div>
         </div>
