@@ -31,22 +31,33 @@
 
     <div class="row responsive">
 
-        @foreach($rooms as $room)
 
-            <div class="col l6 s12 m6 xl6">
-                <h1>{{$room->room_type->name}}</h1>
-                <p>{{$room->price}}</p>
-                <div class="carousel">
-                    @foreach($room->RoomPictures as $picture)
-                        <a class="carousel-item"><img src="{{asset('images/rooms/'.$picture->picture)}}"></a>
-                    @endforeach
-                </div>
+        <div class="card">
+
+            <div class="card-content col l6 s12 m6 xl6">
+
+                @foreach($rooms as $room)
+
+                    <div class="col l6 s12 m6 xl6">
+                        <h1>{{$room->room_type->name}}</h1>
+                        <p>{{$room->price}}</p>
+                        <div class="carousel">
+                            @foreach($room->RoomPictures as $picture)
+                                <a class="carousel-item"><img src="{{asset('images/rooms/'.$picture->picture)}}"></a>
+                            @endforeach
+                        </div>
+
+                    </div>
+
+
+
+                @endforeach
 
             </div>
 
+        </div>
 
 
-        @endforeach
     </div>
 
 @endsection
