@@ -49,7 +49,8 @@ class UserController extends Controller
             'password' => 'required|confirmed',
             'password_confirmation' => 'required'
         ]);
-
+        $request['id'] = time();
+        $request['password'] = bcrypt($request['password']);
         $user = $request->except('password_confirmation');
 
         if($request['picture'])
@@ -57,12 +58,7 @@ class UserController extends Controller
             $imageName = time().'.'.request()->picture->getClientOriginalExtension();
             request()->picture->move(public_path('images/users'), $imageName);
             $banner_image['picture'] = $imageName;
-
         }
-
-        $request['id'] = time();
-        $request['password'] = bcrypt($request['password']);
-
         User::create($user);
 
         return redirect()->route('user.index')
