@@ -3,30 +3,22 @@
 
     <div class="row">
         <div class="carousel carousel-slider" data-indicators="true">
-            <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/800/400/food/1"></a>
-            <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/800/400/food/2"></a>
-            <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/800/400/food/3"></a>
-            <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/800/400/food/4"></a>
+            @foreach($banner_images as $banner_image)
+            <a class="carousel-item"><img src="{{asset('images/banners/'.$banner_image->image)}}"></a>
+            @endforeach
         </div>
     </div>
 
     <div class="row responsive">
 
-        <div class="col l4 s12">
-            <h1>Articulo 1</h1>
-            <p>Soy el articulo 1</p>
+        @foreach($articles as $article)
+
+        <div class="col l6 s12 m6 xl6">
+            <h1>{{$article->title}}</h1>
+            <p>{{$article->article}}</p>
         </div>
 
-        <div class="col l4 s12">
-            <h1>Articulo 1</h1>
-            <p>Soy el articulo 1</p>
-        </div>
-
-        <div class="col l4 s12">
-            <h1>Articulo 1</h1>
-            <p>Soy el articulo 1</p>
-        </div>
-
+        @endforeach
     </div>
 
 @endsection

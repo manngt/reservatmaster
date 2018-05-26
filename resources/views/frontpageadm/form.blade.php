@@ -11,7 +11,7 @@
 <div class="row">
     <div class="input-field col s12">
         <i class="material-icons prefix">note</i>
-        <textarea id="name" name="article" value="{{ old('article',isset($article->article) ? $article->article : null) }}" type="text" required="required"> </textarea>
+        <textarea id="name" name="article" type="text" required="required">{{ old('article',isset($article->article) ? $article->article : null) }} </textarea>
         <label for="name">Articulo</label>
     </div>
 </div>

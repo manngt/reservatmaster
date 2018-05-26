@@ -26,6 +26,7 @@
     <!-- CORE CSS-->
     <link href="{{asset('materialize/css/themes/horizontal-menu/materialize.css')}}" type="text/css" rel="stylesheet">
     <link href="{{asset('materialize/css/themes/horizontal-menu/style.css')}}" type="text/css" rel="stylesheet">
+    <link href="{{asset('materialize/css/ghpages-materialize.css')}}" type="text/css" rel="stylesheet">
     <!-- CSS style Horizontal Nav-->
     <link href="{{asset('materialize/css/layouts/style-horizontal.css')}} " type="text/css" rel="stylesheet">
     <!-- Custome CSS-->
@@ -115,8 +116,13 @@
 <!--custom-script.js - Add your own theme custom JS-->
 <script type="text/javascript" src="{{asset('materialize/js/custom-script.js')}}"></script>
 
-<script type="text/javascript" src="{{asset('materialize/js/scripts/dashboard-ecommerce.js')}}"></script>
+
 @yield('scripts')
+<script>
+    $( document ).ready(function(){
+        $(".button-collapse").sideNav();
+    });
+</script>
 </body>
 
 </html>

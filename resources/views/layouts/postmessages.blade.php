@@ -27,3 +27,15 @@
         </button>
     </div>
 @endif
+
+
+@if ($message = Session::get('Incorrecto'))
+    <div id="card-alert" class="card red">
+        <div class="card-content white-text">
+            <p>{{$message}}</p>
+        </div>
+        <button type="button" class="close white-text" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div>
+@endif
