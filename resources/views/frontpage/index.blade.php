@@ -32,13 +32,13 @@
     <div class="row responsive">
 
 
-        <div class="card">
+        <div class="card col l6 s12 m6 xl6">
 
-            <div class="card-content col l6 s12 m6 xl6">
+            <div class="card-content">
 
                 @foreach($rooms as $room)
 
-                    <div class="col l6 s12 m6 xl6">
+                    <div class="card-img">
                         <h1>{{$room->room_type->name}}</h1>
                         <p>{{$room->price}}</p>
                         <div class="carousel">
