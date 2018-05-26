@@ -16,7 +16,7 @@
 
 <div class="row">
     <div class="input-field col s12">
-        <i class="material-icons prefix">add_checkdetail</i>
+        <i class="material-icons prefix">insert_comment</i>
         <input id="name" name="description" value="{{ old('description',isset($check_detail->description) ? $check_detail->description : null) }}" type="text" >
         <label for="name">Descripción</label>
     </div>
@@ -24,7 +24,7 @@
 
 <div class="row">
     <div class="input-field col s12">
-        <i class="material-icons prefix">add_checkdetail</i>
+        <i class="material-icons prefix">attach_money</i>
         <input id="name" name="amount" value="{{ old('amount',isset($check_detail->amount) ? $check_detail->amount : null) }}" type="number"  step="any">
         <label for="name">Monto</label>
     </div>
