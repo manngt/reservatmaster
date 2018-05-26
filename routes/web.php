@@ -15,9 +15,9 @@
     return view('frontpage.index');
 });*/
 
-Route::get('/dashboard', function () {
+/*Route::get('/dashboard', function () {
     return view('dashboard.index');
-});
+});*/
 
 
 
@@ -40,6 +40,7 @@ Route::resource('reservation','ReservationController');
 Route::resource('user','UserController');
 Route::resource('check','CheckController');
 Route::resource('checkdetail','CheckDetailController');
+Route::resource('dashboard','DashboardController');
 Auth::routes();
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::get('/home', 'HomeController@index')->name('home');
