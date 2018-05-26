@@ -110,7 +110,7 @@ class UserController extends Controller
             'birthday'=>'required',
             'title' => 'required',
             'position' => 'required',
-            'email' => 'required|unique:users',
+            'email' => 'required',
             'password' => 'confirmed',
             'password_confirmation' => ''
         ]);
