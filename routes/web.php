@@ -15,19 +15,18 @@
     return view('frontpage.index');
 });*/
 
-Route::get('/dashboard', function () {
+/*Route::get('/dashboard', function () {
     return view('dashboard.index');
-});
+});*/
 
 
-Route::get('/booking', function () {
-    return view('booking.index');
-});
+
 
 Route::resource('level','LevelController');
 Route::resource('location','LocationController');
 Route::resource('roomtype','RoomTypeController');
 Route::resource('room','RoomController');
+Route::resource('roompicture','RoomPictureController');
 Route::resource('roomstatus','RoomStatusController');
 Route::resource('frontpageadm','FrontPageAdmController');
 Route::resource('bannerimage','BannerImageController');
@@ -38,12 +37,11 @@ Route::resource('reservationtime','ReservationTimeController');
 Route::resource('reservationsource','ReservationSourceController');
 Route::resource('reservationstatus','ReservationStatusController');
 Route::resource('reservation','ReservationController');
-Route::get('/roomcontrol', function () {
-    return view('room.roomcontrol');
-});
-
+Route::resource('user','UserController');
+Route::resource('check','CheckController');
+Route::resource('checkdetail','CheckDetailController');
+Route::resource('dashboard','DashboardController');
 Auth::routes();
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
-
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'FrontPageController@index')->name('inicio');

@@ -30,4 +30,9 @@ class Client extends Model
     {
         return $this->belongsTo(Country::class,'country_id','id');
     }
+
+    public function Checks()
+    {
+        return $this->hasMany(Check::class,'client_id','id');
+    }
 }

@@ -5,7 +5,7 @@
                 <li>
                     <h1 class="logo-wrapper">
                         <a href="/room" class="brand-logo darken-1">
-                            <img src="{{ asset('materialize/images/logo/iconreservat.png') }}" alt="materialize logo">
+                            <img src="{{ asset('materialize/images/logo/iconreservat.png') }}" alt="ReservatMaster">
                             <span class="logo-text hide-on-med-and-down">Reservat Master</span>
                         </a>
                     </h1>

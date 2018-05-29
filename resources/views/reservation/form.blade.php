@@ -106,7 +106,7 @@
             <option value="Miercoles">Miercoles</option>
             <option value="Jueves">Jueves</option>
             <option value="Viernes">Viernes</option>
-            <option value="Domingo">Domingo</option>
+            <option value="Sabado">Sabado</option>
 
         </select>
     </div>
