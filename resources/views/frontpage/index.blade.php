@@ -29,7 +29,7 @@
         @endforeach
     </div>
 
-    <div class="row responsive col l6 s12 m6 x6">
+
 
 
         <div class="card col l6 s12 m6 xl6">
@@ -58,17 +58,10 @@
         </div>
 
 
-    </div>
+    
 
 @endsection
-@section('scripts')
-<script>
 
-    $(document).ready(function(){
-        $('.slider').slider();
-        $('.carousel.carousel-slider').carousel({fullWidth: true});
-    });
-</script>
 
 @section('scripts')
     <script>
@@ -77,5 +70,4 @@
         });
     </script>
 
-@endsection
 @endsection
