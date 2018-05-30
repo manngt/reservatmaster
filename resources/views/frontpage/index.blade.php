@@ -36,7 +36,7 @@
 
                 @foreach($rooms as $room)
 
-                        <div class="col l6 s12 m6 xl6 sm6">
+                        <div class="col l6 s6 m6 xl6 sm6">
 
                             <div class="card-content ">
 
