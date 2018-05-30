@@ -36,11 +36,9 @@
 
                 @foreach($rooms as $room)
 
-                        <div class="col l6 s6 m6 xl6 sm6">
 
-                            <div class="card-content ">
 
-                                <div class="card-img">
+                                <div class="col l6 s12 m6 xl6">
                                     <h1>{{$room->room_type->name}}</h1>
                                     <p>{{$room->price}}</p>
                                     <div class="carousel">
@@ -50,8 +48,7 @@
                                     </div>
 
                                 </div>
-                            </div>
-                        </div>
+                         
 
 
 
@@ -75,6 +72,8 @@
         $(document).ready(function(){
             $('.carousel').carousel();
         });
+
+
     </script>
 
 @endsection
