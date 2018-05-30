@@ -32,11 +32,13 @@
 
 
 
-        <div class="card col l6 s6 m6 xl6">
 
-            <div class="card-content col l6 s6 m6 xl6">
 
                 @foreach($rooms as $room)
+
+                    <div class="card col l6 s6 m6 xl6">
+
+                        <div class="card-content col l6 s6 m6 xl6">
 
                     <div class="card-img col l6 s6 m6 xl6">
                         <h1>{{$room->room_type->name}}</h1>
@@ -48,14 +50,16 @@
                         </div>
 
                     </div>
+                        </div>
+                    </div>
 
 
 
                 @endforeach
 
-            </div>
 
-        </div>
+
+
 
 
 
