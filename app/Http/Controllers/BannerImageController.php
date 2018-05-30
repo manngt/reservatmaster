@@ -66,7 +66,6 @@ class BannerImageController extends Controller
     public function update(Request $request,$id)
     {
         $request->validate([
-            'image' => 'required',
             'order' => 'required|numeric',
             'title' => 'required',
             'subtitle' => 'required',
