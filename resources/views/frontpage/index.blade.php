@@ -2,7 +2,7 @@
 @section('content')
 
 
-    <div class="slider">
+    <div class="carousel carousel-slider">
         <ul class="slides">
 
             @foreach($banner_images as $banner_image)
@@ -48,7 +48,7 @@
                                     </div>
 
                                 </div>
-                         
+
 
 
 
@@ -71,7 +71,10 @@
     <script>
         $(document).ready(function(){
             $('.carousel').carousel();
+            $('.carousel.carousel-slider').carousel({fullWidth: true});
         });
+
+
 
 
     </script>
