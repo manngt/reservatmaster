@@ -28,17 +28,24 @@
 
         @endforeach
     </div>
-    @foreach($rooms as $room)
-        <div class="col l6 s12 m6 xl6">
-            <h1>{{$room->room_type->name}}</h1>
-            <p>{{$room->price}}</p>
-            <div class="carousel">
-                @foreach($room->RoomPictures as $picture)
-                    <a class="carousel-item"><img src="{{asset('images/rooms/'.$picture->picture)}}"></a>
-                @endforeach
-            </div>
-        </div>
-    @endforeach
+
+    <div class="slider">
+        <ul class="slides">
+
+            @foreach($rooms as $room)
+                <li>
+                    @foreach($room->RoomPictures as $picture)
+                        <a class="carousel-item"><img src="{{asset('images/rooms/'.$picture->picture)}}"></a>
+                    @endforeach
+                    <div class="caption center-align">
+                        <h3>{{$room->room_type->name}}</h3>
+                        <h5 class="light grey-text text-lighten-3">{{$room->price}}</h5>
+                    </div>
+                </li>
+            @endforeach
+        </ul>
+    </div>
+    
 
 @endsection
 
