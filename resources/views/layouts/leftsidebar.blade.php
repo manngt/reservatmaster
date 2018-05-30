@@ -82,7 +82,13 @@
                         <li>
                             <a href="{{route('roompicture.index')}}">
                                 <i class="material-icons">keyboard_arrow_right</i>
-                                <span>Imagenes</span>
+                                <span>Agregar Imagenes</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{route('roomfeature.index')}}">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                                <span>Agregar Caracteristicas</span>
                             </a>
                         </li>
                     </ul>
