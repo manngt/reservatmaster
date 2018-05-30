@@ -2,7 +2,7 @@
 @section('content')
 
 
-    <div class="carousel carousel-slider">
+    <div class="slider">
         <ul class="slides">
 
             @foreach($banner_images as $banner_image)
