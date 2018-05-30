@@ -38,7 +38,18 @@
                     </li>
                 @endforeach
             </ul>
+
+            <ul>
+
+                @foreach($room->RoomFeatures as $roomFeature)
+                    <li>{{$roomFeature->$roomFeature}}</li>
+                @endforeach
+            </ul>
+
+
+           
         </div>
+
     @endforeach
 
 @endsection
