@@ -32,9 +32,9 @@
 
 
 
-        <div class="card col l6 s12 m6 xl6">
+        <div class="card col l6 s6 m6 xl6">
 
-            <div class="card-content">
+            <div class="card-content col l6 s6 m6 xl6">
 
                 @foreach($rooms as $room)
 
@@ -58,7 +58,7 @@
         </div>
 
 
-    
+
 
 @endsection
 
