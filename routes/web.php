@@ -27,6 +27,7 @@ Route::resource('location','LocationController');
 Route::resource('roomtype','RoomTypeController');
 Route::resource('room','RoomController');
 Route::resource('roompicture','RoomPictureController');
+Route::resource('roomfeature','RoomFeatureController');
 Route::resource('roomstatus','RoomStatusController');
 Route::resource('frontpageadm','FrontPageAdmController');
 Route::resource('bannerimage','BannerImageController');
