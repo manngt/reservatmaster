@@ -29,7 +29,7 @@
         @endforeach
     </div>
 
-    <div class="row responsive">
+    <div class="row responsive col l6 s12 m6 x6">
 
 
         <div class="card col l6 s12 m6 xl6">
