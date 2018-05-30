@@ -10,7 +10,7 @@
                 <img src="{{asset('images/banners/'.$banner_image->image)}}"> <!-- random image -->
                 <div class="caption center-align">
                     <h3>{{$banner_image->title}}</h3>
-                    <h5 class="light grey-text text-lighten-3">{{$banner_image->title}}</h5>
+                    <h5 class="light grey-text text-lighten-3">{{$banner_image->subtitle}}</h5>
                 </div>
             </li>
             @endforeach
