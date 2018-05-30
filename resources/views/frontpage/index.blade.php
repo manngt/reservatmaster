@@ -9,8 +9,8 @@
             <li>
                 <img src="{{asset('images/banners/'.$banner_image->image)}}"> <!-- random image -->
                 <div class="caption center-align">
-                    <h3>Paisajes asombrosos!</h3>
-                    <h5 class="light grey-text text-lighten-3">Para que relajes</h5>
+                    <h3>{{$banner_image->title}}</h3>
+                    <h5 class="light grey-text text-lighten-3">{{$banner_image->title}}</h5>
                 </div>
             </li>
             @endforeach
@@ -58,10 +58,5 @@
             $('.carousel').carousel({fullWidth:false});
             $('.carousel.carousel-slider').carousel({fullWidth: false});
         });
-
-
-
-
     </script>
-
 @endsection

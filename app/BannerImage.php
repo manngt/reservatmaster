@@ -8,6 +8,8 @@ class BannerImage extends Model
 {
     protected $fillable = [
         'image',
-        'order'
+        'order',
+        'title',
+        'subtitle'
     ];
 }

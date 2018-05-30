@@ -34,6 +34,8 @@ class BannerImageController extends Controller
         $request->validate([
             'image' => 'required',
             'order' => 'required|numeric|unique:banner_images',
+            'title' => 'required',
+            'subtitle' => 'required',
         ]);
 
         $banner_image = $request->all();
@@ -66,6 +68,8 @@ class BannerImageController extends Controller
         $request->validate([
             'image' => 'required',
             'order' => 'required|numeric',
+            'title' => 'required',
+            'subtitle' => 'required',
         ]);
 
         $banner_image = $request->all();

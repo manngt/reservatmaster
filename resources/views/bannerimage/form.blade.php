@@ -17,6 +17,22 @@
 
 <div class="row">
     <div class="input-field col s12">
+        <i class="material-icons prefix">format_list_numbered</i>
+        <input id="name" name="title" value="{{ old('title',isset($banner_image->title) ? $banner_image->title : null) }}" type="text" required="required">
+        <label for="name">Titulo</label>
+    </div>
+</div>
+
+<div class="row">
+    <div class="input-field col s12">
+        <i class="material-icons prefix">format_list_numbered</i>
+        <input id="name" name="subtitle" value="{{ old('subtitle',isset($banner_image->subtitle) ? $banner_image->subtitle : null) }}" type="text" required="required">
+        <label for="name">Subtitulo</label>
+    </div>
+</div>
+
+<div class="row">
+    <div class="input-field col s12">
         <button class="btn cyan waves-effect waves-light right" type="submit" name="action">Guardar
             <i class="material-icons right">save</i>
         </button>
