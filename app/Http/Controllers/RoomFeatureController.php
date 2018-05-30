@@ -33,8 +33,8 @@ class RoomFeatureController extends Controller
      */
     public function create()
     {
-
-        return view('roomfeature.create');
+        $rooms = Room::all();
+        return view('roomfeature.create',compact('rooms'));
 
     }
 
@@ -81,9 +81,11 @@ class RoomFeatureController extends Controller
     public function edit($id)
     {
         $room_feature = RoomFeature::find($id);
+        $rooms = Room::all();
 
         return view('roomfeature.edit',[
-            'room_feature' => $room_feature
+            'room_feature' => $room_feature,
+            'rooms' => $rooms
         ]);
     }
 
