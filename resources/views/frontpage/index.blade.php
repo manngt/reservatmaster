@@ -34,18 +34,13 @@
                         <div class="caption center-align">
                             <h3>{{$room->room_type->name}}</h3>
                             <h5 class="light grey-text text-lighten-3">{{$room->price}}</h5>
+                            @foreach($room->RoomFeatures as $roomFeature)
+                                <h5>{{$roomFeature->feature}}</h5>
+                            @endforeach
                         </div>
                     </li>
                 @endforeach
             </ul>
-
-            <ul>
-
-                @foreach($room->RoomFeatures as $roomFeature)
-                    <li>{{$roomFeature->feature}}</li>
-                @endforeach
-            </ul>
-
 
 
         </div>
