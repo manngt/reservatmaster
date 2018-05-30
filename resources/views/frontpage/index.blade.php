@@ -29,10 +29,11 @@
         @endforeach
     </div>
 
-    <div class="slider">
-        <ul class="slides">
+
 
             @foreach($rooms as $room)
+                <div class="slider">
+                    <ul class="slides">
                 <li>
                     @foreach($room->RoomPictures as $picture)
                         <a class="carousel-item"><img src="{{asset('images/rooms/'.$picture->picture)}}"></a>
@@ -42,10 +43,11 @@
                         <h5 class="light grey-text text-lighten-3">{{$room->price}}</h5>
                     </div>
                 </li>
+                    </ul>
+                </div>
             @endforeach
-        </ul>
-    </div>
-    
+
+
 
 @endsection
 
