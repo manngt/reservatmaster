@@ -29,7 +29,7 @@
         @endforeach
     </div>
 
-
+    <h2>Habitaciones</h2>
 
     @foreach($rooms as $room)
         <div class="slider">
