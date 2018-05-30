@@ -149,7 +149,7 @@ class RoomController extends Controller
 
             'levels' => $levels,
 
-            'rommstatuses' => $roomstatuses,
+            'roomstatuses' => $roomstatuses,
 
             'edit' => true
 
