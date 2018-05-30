@@ -17,7 +17,7 @@
                                 @if ($room_type->id == $room->room_type_id)
                                 selected="selected"
                                 @endif
-                            @endif>{{$room_type->name}}</option>
+                            @endif>{{$room_type->number}}</option>
             @endforeach
         </select>
     </div>
