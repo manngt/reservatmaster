@@ -136,7 +136,7 @@ class RoomController extends Controller
 
         $levels = Level::select('name','id')->get();
 
-        $roomstatuses = Room::select('id','name')->get();
+        $roomstatuses = RoomStatus::select('id','name')->get();
 
 
         return view('room.edit',[
