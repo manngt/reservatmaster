@@ -42,12 +42,12 @@
             <ul>
 
                 @foreach($room->RoomFeatures as $roomFeature)
-                    <li>{{$roomFeature->$roomFeature}}</li>
+                    <li>{{$roomFeature->feature}}</li>
                 @endforeach
             </ul>
 
 
-           
+
         </div>
 
     @endforeach
