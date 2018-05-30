@@ -36,22 +36,26 @@
 
                 @foreach($rooms as $room)
 
-                    <div class="card col l4 s4 m4 xl4">
+                    <div class="col l6 s12 m6 xl6">
+                        <div class="card">
 
-                        <div class="card-content ">
+                            <div class="card-content ">
 
-                    <div class="card-img">
-                        <h1>{{$room->room_type->name}}</h1>
-                        <p>{{$room->price}}</p>
-                        <div class="carousel">
-                            @foreach($room->RoomPictures as $picture)
-                                <a class="carousel-item"><img src="{{asset('images/rooms/'.$picture->picture)}}"></a>
-                            @endforeach
+                                <div class="card-img">
+                                    <h1>{{$room->room_type->name}}</h1>
+                                    <p>{{$room->price}}</p>
+                                    <div class="carousel">
+                                        @foreach($room->RoomPictures as $picture)
+                                            <a class="carousel-item"><img src="{{asset('images/rooms/'.$picture->picture)}}"></a>
+                                        @endforeach
+                                    </div>
+
+                                </div>
+                            </div>
                         </div>
+                    </div>
 
-                    </div>
-                        </div>
-                    </div>
+
 
 
 
