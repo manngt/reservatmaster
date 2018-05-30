@@ -38,7 +38,7 @@
 
                 @foreach($rooms as $room)
 
-                    <div class="card-img">
+                    <div class="card-img col l6 s6 m6 xl6">
                         <h1>{{$room->room_type->name}}</h1>
                         <p>{{$room->price}}</p>
                         <div class="carousel">
