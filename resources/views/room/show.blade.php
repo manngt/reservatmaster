@@ -41,6 +41,15 @@
                     </div>
 
                 </li>
+                @foreach($room->RoomFeatures as $roomFeature)
+                    <li>
+                        <div class="collapsible-header">
+                            <i class="material-icons">local_offer</i>
+                            {{$roomFeature->feature}}
+                        </div>
+
+                    </li>
+                    @endforeach
             </ul>
         </div>
     </div>
